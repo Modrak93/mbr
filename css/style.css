@@ -12,8 +12,19 @@ h2 {
   font-size: 64px;
   font-weight: 300;
 }
+@media (max-width: 991px) {
+  h1,
+  h2 {
+    font-size: 25px;
+  }
+}
 h4 {
   font-size: 24px;
+}
+@media (max-width: 991px) {
+  h4 {
+    font-size: 19px;
+  }
 }
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
@@ -41,11 +52,23 @@ h4 {
   font-weight: 800;
 }
 .sec-heading {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 .sec-heading h1,
 .sec-heading h2 {
   padding-bottom: 24px;
+}
+.btn-default {
+  border: 2px solid #00a0d2;
+  border-radius: 7px;
+  color: #00a0d2;
+  font-size: 24px;
+  padding: 10px 40px;
+  transition: ease-in 0.1s;
+}
+.btn-default:hover {
+  background-color: #00a0d2;
+  color: #3d466e;
 }
 .masthead {
   background-color: aquamarine;
@@ -63,16 +86,6 @@ h4 {
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
-  }
-}
-.masthead h1 {
-  font-size: 4rem;
-  margin: 0;
-  padding: 0;
-}
-@media (min-width: 992px) {
-  .masthead h1 {
-    font-size: 5.5rem;
   }
 }
 #sidebar-wrapper {
@@ -179,6 +192,11 @@ h4 {
   font-weight: 400;
   sont-size: 16px;
 }
+@media (max-width: 991px) {
+  .sec-main-about .sec-desc p {
+    font-size: 16px;
+  }
+}
 .sec-main-about .quote {
   color: #00a0d2;
   max-width: 302px;
@@ -186,6 +204,11 @@ h4 {
 .sec-main-about .quote q {
   font-size: 36px;
   line-height: 1.2;
+}
+@media (max-width: 991px) {
+  .sec-main-about .quote q {
+    font-size: 25px;
+  }
 }
 .sec-main-about .quote cite {
   font-style: normal;
@@ -199,28 +222,246 @@ h4 {
 .sec-main-serv .sec-heading {
   color: #00a0d2;
 }
-.sec-main-serv .sec-heading h4 {
+.sec-main-serv .sec-desc h4 {
   color: #f7f7f7;
+  padding-bottom: 30px;
 }
 .sec-main-serv .sec-desc p {
   color: #fafafa;
 }
 .sec-main-serv .sec-desc a {
-  border: 2px solid #00a0d2;
-  border-radius: 7px;
-  color: #00a0d2;
-  font-size: 24px;
-  padding: 10px 40px;
   margin-top: 30px;
-  transition: ease-in 0.1s;
 }
-.sec-main-serv .sec-desc a:hover {
+@media (max-width: 991px) {
+  .sec-main-serv .sec-desc a {
+    font-size: 15px;
+  }
+}
+.sec-main-serv .serv-img {
+  padding-top: 25px;
+}
+@media (max-width: 991px) {
+  .sec-main-serv .serv-img img {
+    max-width: 50%;
+    height: auto;
+  }
+}
+.sec-main-serv2 {
+  background-color: #272c44;
+}
+.sec-main-serv2 .sec-heading {
+  color: #00a0d2;
+}
+.sec-main-serv2 .sec-desc h4 {
+  color: #f7f7f7;
+  padding-bottom: 30px;
+}
+.sec-main-serv2 .sec-desc p {
+  color: #fafafa;
+}
+.sec-main-serv2 .sec-desc a {
+  margin-top: 30px;
+}
+@media (max-width: 991px) {
+  .sec-main-serv2 .sec-desc a {
+    font-size: 15px;
+  }
+}
+.sec-main-serv2 .sec-desc .price {
+  color: #f7f7f7;
+  font-size: 24px;
+  padding-left: 30px;
+}
+.sec-main-serv2 .sec-desc .price span {
+  font-size: 36px;
+  font-weight: 700;
+  padding-left: 16px;
+}
+.sec-main-serv2 .serv-img {
+  padding-top: 25px;
+}
+@media (max-width: 991px) {
+  .sec-main-serv2 .serv-img img {
+    max-width: 50%;
+    height: auto;
+  }
+}
+.sec-main-news {
+  background-color: #3d466e;
+}
+.sec-main-news .section-title {
+  color: #d2d2d2;
+  font-size: 48px;
+  padding-bottom: 58px;
+  font-weight: 300;
+}
+@media (max-width: 991px) {
+  .sec-main-news .section-title {
+    font-size: 25px;
+  }
+}
+.sec-main-news .single-news {
+  color: #fafafa;
+}
+@media (max-width: 991px) {
+  .sec-main-news .single-news {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f7f7f7;
+    margin-bottom: 20px;
+  }
+}
+.sec-main-news .news-img img {
+  max-width: 70%;
+  height: auto;
+}
+@media (max-width: 991px) {
+  .sec-main-news .news-img img {
+    max-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .sec-main-news .news-title {
+    padding: 25px 0;
+  }
+}
+.sec-main-news .news-title a {
+  margin: 0;
+}
+.sec-main-news .news-title a h6 {
+  font-size: 24px;
+  font-weight: 300;
+  color: #fafafa;
+}
+@media (max-width: 991px) {
+  .sec-main-news .news-title a h6 {
+    font-size: 16px;
+  }
+}
+.sec-serv-1 {
+  background-color: #272c44;
+}
+.sec-serv-1 .sec-heading {
+  color: #f22686;
+}
+.sec-serv-1 .sec-desc h4 {
+  color: #f7f7f7;
+  padding-bottom: 30px;
+}
+.sec-serv-1 .sec-desc p {
+  color: #fafafa;
+}
+.sec-serv-1 .sec-desc a {
+  margin-top: 30px;
+}
+@media (max-width: 991px) {
+  .sec-serv-1 .sec-desc a {
+    font-size: 15px;
+  }
+}
+.sec-serv-1 .sec-desc .price {
+  color: #f7f7f7;
+  font-size: 24px;
+  padding-left: 30px;
+}
+.sec-serv-1 .sec-desc .price span {
+  font-size: 36px;
+  font-weight: 700;
+  padding-left: 16px;
+}
+.sec-serv-1 .serv-img {
+  padding-top: 25px;
+}
+@media (max-width: 991px) {
+  .sec-serv-1 .serv-img img {
+    max-width: 50%;
+    height: auto;
+  }
+}
+.sec-serv-packets {
+  background-color: #3d466e;
+  text-align: center;
+}
+.sec-serv-packets .sec-heading {
+  color: #f7f7f7;
+}
+.sec-serv-packets .single-packet .packet-head {
+  color: #00a0d2;
+  height: 110px;
+  margin-bottom: 58px;
+}
+@media (max-width: 991px) {
+  .sec-serv-packets .single-packet .packet-head {
+    margin-bottom: 0px;
+  }
+}
+.sec-serv-packets .single-packet .packet-head h3 {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.sec-serv-packets .single-packet .packet-head p {
+  font-style: italic;
+}
+.sec-serv-packets .single-packet .price {
+  border: 3px solid #f7f7f7;
+  border-radius: 15px;
+  padding: 15px 26px 0px;
+  color: #f7f7f7;
+  margin: 0 20px;
+}
+.sec-serv-packets .single-packet .price .price-1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.sec-serv-packets .single-packet .price .price-2 span {
+  font-style: italic;
+  font-size: 14px;
+}
+.sec-serv-packets .single-packet .task-list {
+  color: #f7f7f7;
+  padding-top: 25px;
+}
+.sec-serv-packets .single-packet .task-list ul {
+  padding: 0;
+  line-height: 1.56;
+}
+@media (max-width: 991px) {
+  .sec-serv-packets .single-packet .task-list ul {
+    margin-bottom: 50px;
+  }
+}
+.sec-serv-packets .packet-2 .price {
+  border-color: #00a0d2;
   background-color: #00a0d2;
   color: #3d466e;
 }
-.sec-main-news .news-img img {
-  max-width: 100%;
-  height: auto;
+@media (max-width: 991px) {
+  .sec-serv-packets .packet-3 .packet-head {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .sec-serv-packets .packet-3 .task-list ul {
+    margin-bottom: 0px;
+  }
+}
+footer {
+  padding: 75px 0;
+  background-color: #272c44;
+}
+footer .footer-title h3 {
+  color: #00a0d2;
+  font-size: 24px;
+  font-weight: 300;
+}
+@media (max-width: 991px) {
+  footer .footer-title h3 {
+    font-size: 20px;
+  }
+}
+footer .footer-contact {
+  color: #f7f7f7;
+  font-size: 18px;
 }
 
 /* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

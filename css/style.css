@@ -71,26 +71,76 @@ h4 {
   color: #3d466e;
 }
 .masthead {
-  background-color: aquamarine;
+  background-image: url(../images/background.jpg);
   min-height: 30rem;
   position: relative;
   display: table;
   width: 100%;
   height: auto;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
   }
 }
+.masthead .img1 {
+  max-width: 50%;
+  height: auto;
+  position: absolute;
+  top: -25%;
+  left: -12%;
+  z-index: 2;
+}
+@media (max-width: 991px) {
+  .masthead .img1 {
+    left: -12%;
+    top: -14%;
+    max-width: 65%;
+  }
+}
+.masthead .img2 {
+  max-width: 35%;
+  height: auto;
+  position: absolute;
+  top: 40%;
+  left: -13%;
+  z-index: 1;
+}
+@media (max-width: 991px) {
+  .masthead .img2 {
+    display: none;
+  }
+}
+.masthead .img3 {
+  max-width: 25%;
+  height: auto;
+  position: absolute;
+  top: 30%;
+  right: -13%;
+  z-index: 1;
+}
+@media (max-width: 991px) {
+  .masthead .img3 {
+    display: none;
+  }
+}
+.masthead .logo {
+  position: absolute;
+  z-index: 3;
+  top: 3%;
+  left: 3%;
+}
+.masthead .logo img {
+  max-width: 40%;
+  height: auto;
+}
 #sidebar-wrapper {
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   right: 0;
   width: 250px;
   height: 100%;
@@ -159,7 +209,6 @@ h4 {
   height: 50px;
   text-align: center;
   color: #f22686;
-  background: rgba(61, 70, 110, 0.8);
   line-height: 54px;
   z-index: 999;
 }
@@ -174,6 +223,8 @@ h4 {
   background: #343a40;
 }
 .sec-main-about {
+  position: relative;
+  z-index: 3;
   background-color: #272c44;
 }
 .sec-main-about .sec-heading {
@@ -339,6 +390,8 @@ h4 {
 }
 .sec-serv-1 {
   background-color: #272c44;
+  position: relative;
+  z-index: 3;
 }
 .sec-serv-1 .sec-heading {
   color: #f22686;
@@ -443,6 +496,96 @@ h4 {
 @media (max-width: 991px) {
   .sec-serv-packets .packet-3 .task-list ul {
     margin-bottom: 0px;
+  }
+}
+.sec-services {
+  background-color: #272c44;
+  position: relative;
+  z-index: 3;
+}
+.sec-services .sec-heading {
+  color: #f22686;
+}
+.sec-services .sec-desc h4 {
+  color: #f7f7f7;
+  padding-bottom: 30px;
+}
+.sec-services .sec-desc p {
+  color: #fafafa;
+}
+.sec-services .sec-desc a {
+  margin-top: 30px;
+}
+@media (max-width: 991px) {
+  .sec-services .sec-desc a {
+    font-size: 15px;
+  }
+}
+.sec-services .serv-img {
+  padding-top: 25px;
+}
+@media (max-width: 991px) {
+  .sec-services .serv-img img {
+    max-width: 50%;
+    height: auto;
+  }
+}
+.sec-services-list {
+  background-color: #3d466e;
+}
+.sec-services-list .row:nth-child(n+2) {
+  border-bottom: 1px solid #525f99;
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+}
+@media (max-width: 991px) {
+  .sec-services-list .row:nth-child(n+2) {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+.sec-services-list .row:last-child {
+  border-bottom: 0;
+}
+.sec-services-list .sec-heading {
+  color: #f22686;
+  padding-bottom: 80px;
+}
+@media (max-width: 991px) {
+  .sec-services-list .sec-heading {
+    padding-bottom: 50px;
+  }
+}
+.sec-services-list .sec-heading h2 {
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 991px) {
+  .sec-services-list .single-service {
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #525f99;
+  }
+}
+.sec-services-list .service-head h6 {
+  color: #00a0d2;
+  text-transform: uppercase;
+  font-size: 23px;
+}
+.sec-services-list .service-list {
+  color: #f7f7f7;
+}
+.sec-services-list .service-list span {
+  font-size: 14px;
+  font-weight: 700;
+}
+.sec-services-list .service-list ul {
+  line-height: 2;
+}
+@media (max-width: 991px) {
+  .sec-services-list .service-list ul {
+    padding-left: 17px;
   }
 }
 footer {

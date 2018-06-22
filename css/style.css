@@ -31,6 +31,7 @@ h4 {
 }
 .scroll-to-top {
   position: fixed;
+  z-index: 3;
   right: 15px;
   bottom: 15px;
   display: none;
@@ -71,43 +72,43 @@ h4 {
   color: #3d466e;
 }
 .masthead {
-  background-image: url(../images/background.jpg);
   min-height: 30rem;
   position: relative;
   display: table;
   width: 100%;
   height: auto;
-  background-position: center center;
+  background-position: 90% center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 }
 @media (min-width: 992px) {
   .masthead {
-    height: 100vh;
+    height: 85vh;
+    background-position: center center;
   }
 }
 .masthead .img1 {
-  max-width: 50%;
+  max-width: 48%;
   height: auto;
   position: absolute;
   top: -25%;
-  left: -12%;
+  left: -6%;
   z-index: 2;
 }
 @media (max-width: 991px) {
   .masthead .img1 {
     left: -12%;
     top: -14%;
-    max-width: 65%;
+    max-width: 75%;
   }
 }
 .masthead .img2 {
   max-width: 35%;
   height: auto;
   position: absolute;
-  top: 40%;
-  left: -13%;
+  top: 12%;
+  left: 0%;
   z-index: 1;
 }
 @media (max-width: 991px) {
@@ -116,12 +117,13 @@ h4 {
   }
 }
 .masthead .img3 {
-  max-width: 25%;
+  max-width: 16%;
   height: auto;
   position: absolute;
   top: 30%;
-  right: -13%;
+  right: -4%;
   z-index: 1;
+  transform: rotate(180deg);
 }
 @media (max-width: 991px) {
   .masthead .img3 {
@@ -134,9 +136,35 @@ h4 {
   top: 3%;
   left: 3%;
 }
+@media (min-width: 992px) {
+  .masthead .logo {
+    top: 7%;
+    left: 2%;
+  }
+}
 .masthead .logo img {
   max-width: 40%;
   height: auto;
+}
+@media (min-width: 992px) {
+  .masthead .logo img {
+    max-width: 83%;
+  }
+}
+.main-header {
+  background-image: url(../images/background.jpg);
+}
+.oferta-header {
+  background-image: url(../images/mbr-top2.jpg);
+}
+.uslugi-header {
+  background-image: url(../images/background.jpg);
+}
+.news-header {
+  background-image: url(../images/background.jpg);
+}
+.article-header {
+  background-image: url(../images/background.jpg);
 }
 #sidebar-wrapper {
   position: fixed;
@@ -150,7 +178,7 @@ h4 {
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   transform: translatex(250px);
-  background: #f22686;
+  background: #00a0d2;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 .sidebar-nav {
@@ -361,6 +389,13 @@ h4 {
     margin-bottom: 20px;
   }
 }
+@media (min-width: 992px) {
+  .sec-main-news .news-img {
+    overflow: hidden;
+    width: 100%;
+    height: 90px;
+  }
+}
 .sec-main-news .news-img img {
   max-width: 70%;
   height: auto;
@@ -439,7 +474,7 @@ h4 {
 }
 .sec-serv-packets .single-packet .packet-head {
   color: #00a0d2;
-  height: 110px;
+  height: 180px;
   margin-bottom: 58px;
 }
 @media (max-width: 991px) {
@@ -477,6 +512,7 @@ h4 {
 .sec-serv-packets .single-packet .task-list ul {
   padding: 0;
   line-height: 1.56;
+  list-style-position: inside;
 }
 @media (max-width: 991px) {
   .sec-serv-packets .single-packet .task-list ul {
@@ -586,6 +622,183 @@ h4 {
 @media (max-width: 991px) {
   .sec-services-list .service-list ul {
     padding-left: 17px;
+  }
+}
+.sec-news {
+  background-color: #3d466e;
+}
+.sec-news .section-title {
+  color: #d2d2d2;
+  font-size: 48px;
+  padding-bottom: 58px;
+  font-weight: 300;
+}
+@media (max-width: 991px) {
+  .sec-news .section-title {
+    font-size: 25px;
+  }
+}
+.sec-news .single-news {
+  color: #fafafa;
+}
+@media (max-width: 991px) {
+  .sec-news .single-news {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f7f7f7;
+    margin-bottom: 20px;
+  }
+}
+.sec-news .news-img {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+@media (min-width: 992px) {
+  .sec-news .news-img {
+    height: 205px;
+  }
+}
+.sec-news .news-img img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 991px) {
+  .sec-news .news-img img {
+    max-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .sec-news .news-title {
+    padding: 25px 0;
+  }
+}
+.sec-news .news-title a {
+  margin: 0;
+}
+.sec-news .news-title a h6 {
+  font-size: 24px;
+  font-weight: 300;
+  color: #fafafa;
+}
+@media (max-width: 991px) {
+  .sec-news .news-title a h6 {
+    font-size: 16px;
+  }
+}
+.sec-news .page-link {
+  background-color: transparent;
+  border-color: #00a0d2;
+  color: #00a0d2;
+}
+.sec-news .page-link.active {
+  background-color: #00a0d2;
+  color: #f7f7f7;
+}
+.sec-article {
+  background-color: #3d466e;
+}
+.sec-article time {
+  color: #00a0d2;
+  font-size: 14px;
+}
+.sec-article .section-title {
+  color: #d2d2d2;
+  font-size: 48px;
+  padding-bottom: 58px;
+  font-weight: 300;
+}
+@media (max-width: 991px) {
+  .sec-article .section-title {
+    font-size: 25px;
+  }
+}
+.sec-article .single-news {
+  color: #fafafa;
+}
+@media (max-width: 991px) {
+  .sec-article .single-news {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f7f7f7;
+    margin-bottom: 20px;
+  }
+}
+.sec-article .news-title {
+  padding: 20px 0 10px;
+}
+@media (min-width: 992px) {
+  .sec-article .news-title {
+    padding: 65px 0 25px 0;
+  }
+}
+.sec-article .news-title h2 {
+  font-size: 24px;
+  font-weight: 300;
+  color: #fafafa;
+}
+.sec-article .page-link {
+  background-color: transparent;
+  border-color: #00a0d2;
+}
+.sec-article .page-link.active {
+  background-color: #00a0d2;
+  color: #f7f7f7;
+}
+.sec-article .btn-primary {
+  border: 1px solid #00a0d2;
+  border-radius: 15px;
+  background-color: transparent;
+  color: #00a0d2;
+  padding: 9px 21px;
+}
+.sec-article .btn-primary:hover {
+  background-color: #00a0d2;
+  color: #f7f7f7;
+}
+.sec-article .btn-primary.active {
+  border: 1px solid #00a0d2;
+  border-radius: 15px;
+  background-color: #00a0d2;
+  color: #f7f7f7;
+  padding: 9px 21px;
+}
+.sec-contact {
+  background-color: #3d466e;
+}
+.sec-contact .section-title {
+  padding-bottom: 50px;
+}
+@media (max-width: 991px) {
+  .sec-contact .section-title {
+    padding-bottom: 25px;
+  }
+}
+.sec-contact .section-title h2 {
+  color: #f7f7f7;
+}
+.sec-contact .contact-address h1 {
+  font-size: 30px;
+  color: #f22686;
+}
+@media (max-width: 991px) {
+  .sec-contact .contact-address h1 {
+    font-size: 25px;
+  }
+}
+.sec-contact .contact-address .address {
+  color: #f7f7f7;
+  font-size: 18px;
+}
+.sec-contact .map {
+  max-width: 100%;
+  height: auto;
+}
+.sec-contact .map iframe {
+  width: 100%;
+  min-height: 400px;
+}
+@media (max-width: 991px) {
+  .sec-contact .map iframe {
+    min-height: 300px;
   }
 }
 footer {

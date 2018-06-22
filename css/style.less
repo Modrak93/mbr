@@ -40,6 +40,7 @@ h4 {
 
 .scroll-to-top {
   position: fixed;
+  z-index: 3;
   right: 15px;
   bottom: 15px;
   display: none;
@@ -79,50 +80,51 @@ h4 {
 // HEADER
 
 .masthead {
-  background-image: url(../images/background.jpg);
   min-height: 30rem;
   position: relative;
   display: table;
   width: 100%;
   height: auto;
-  background-position: center center;
+  background-position: 90% center;
   background-repeat: no-repeat;
   background-size: cover;
-    overflow: hidden;
+  overflow: hidden;
   @media (min-width: 992px) {
-       height: 100vh; 
+       height: 85vh; 
+       background-position: center center;
     }
     .img1 {
-        max-width: 50%;
+        max-width: 48%;
         height: auto;
         position: absolute;
         top: -25%;
-        left: -12%;
+        left: -6%;
         z-index: 2;
         @media (max-width: 991px) {
             left: -12%;
             top: -14%;
-            max-width: 65%;
+            max-width: 75%;
         }
     }
     .img2 {
         max-width: 35%;
         height: auto;
         position: absolute;
-        top: 40%;
-        left: -13%;
+        top: 12%;
+        left: 0%;
         z-index: 1;
         @media (max-width: 991px) {
             display: none;
         }
     }
     .img3 {
-        max-width: 25%;
+        max-width: 16%;
         height: auto;
         position: absolute;
         top: 30%;
-        right: -13%;
+        right: -4%;
         z-index: 1;
+        transform: rotate(180deg);
         @media (max-width: 991px) {
             display: none;
         }
@@ -132,14 +134,35 @@ h4 {
         z-index: 3;
         top: 3%;
         left: 3%;
+        @media (min-width: 992px) {
+            top: 7%;
+            left: 2%;
+        }
         img {
             max-width: 40%;
             height: auto;
+            @media (min-width: 992px) {
+                max-width: 83%;
+            }
         }
     }
 }
 
-
+.main-header {
+    background-image: url(../images/background.jpg);
+}
+.oferta-header {
+    background-image: url(../images/mbr-top2.jpg);
+}
+.uslugi-header {
+    background-image: url(../images/background.jpg);
+}
+.news-header {
+    background-image: url(../images/background.jpg);
+}
+.article-header {
+    background-image: url(../images/background.jpg);
+}
 
 // SIDE MENU
 
@@ -155,7 +178,7 @@ h4 {
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background: @main-pink;
+  background: @main-blue;
   border-left: 1px solid rgba(255, 255, 255, 0.1); }
 
 .sidebar-nav {
@@ -369,6 +392,11 @@ h4 {
         }
     }
     .news-img {
+        @media (min-width: 992px) {
+            overflow: hidden;
+            width: 100%;
+            height: 90px;
+        }
         img {
             max-width: 70%;
             height: auto;
@@ -451,7 +479,7 @@ h4 {
     .single-packet {
         .packet-head {
             color: @main-blue;
-            height: 110px;
+            height: 180px;
             margin-bottom: 58px;
             @media (max-width: 991px) {
                 margin-bottom: 0px;
@@ -488,6 +516,7 @@ h4 {
             ul {
                 padding: 0;
                 line-height: 1.56;
+                list-style-position: inside;
                 @media (max-width: 991px) {
                     margin-bottom: 50px;
                 } 
@@ -602,6 +631,172 @@ h4 {
             line-height: 2;
             @media (max-width: 991px) {
                 padding-left: 17px;
+            }
+        }
+    }
+}
+
+// NEWS
+
+.sec-news {
+    background-color: @main-gray;
+    .section-title {
+        color: @section-title;
+        font-size: 48px;
+        padding-bottom: 58px;
+        font-weight: 300;
+        @media (max-width: 991px) {
+            font-size: 25px;
+        }
+    }
+    .single-news {
+        color: @text-gray;
+        @media (max-width: 991px) {
+            padding-bottom: 20px;
+            border-bottom: 1px solid @white;
+            margin-bottom: 20px;
+        }
+    }
+    .news-img {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        @media (min-width: 992px) {
+            height: 205px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            @media (max-width: 991px) {
+                max-width: 100%;
+            }
+        }
+    }
+    .news-title {
+        @media (min-width: 992px) {
+            padding: 25px 0;
+        }
+        a {
+            margin: 0;
+            h6 {
+                font-size: 24px;
+                font-weight: 300;
+                color: @text-gray;
+                @media (max-width: 991px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .page-link {
+        background-color: transparent;
+        border-color: @main-blue;
+        color: @main-blue;
+    }
+    .page-link.active {
+        background-color: @main-blue;
+        color: @white;
+    }
+}
+
+// ARTICLE
+
+.sec-article {
+    background-color: @main-gray;
+    time {
+        color: @main-blue;
+        font-size: 14px;
+    }
+    .section-title {
+        color: @section-title;
+        font-size: 48px;
+        padding-bottom: 58px;
+        font-weight: 300;
+        @media (max-width: 991px) {
+            font-size: 25px;
+        }
+    }
+    .single-news {
+        color: @text-gray;
+        @media (max-width: 991px) {
+            padding-bottom: 20px;
+            border-bottom: 1px solid @white;
+            margin-bottom: 20px;
+        }
+    }
+    .news-title {
+        padding: 20px 0 10px;
+        @media (min-width: 992px) {
+            padding: 65px 0 25px 0;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: 300;
+            color: @text-gray;
+        }
+    }
+    .page-link {
+        background-color: transparent;
+        border-color: @main-blue;
+    }
+    .page-link.active {
+        background-color: @main-blue;
+        color: @white;
+    }
+    .btn-primary {
+        border: 1px solid @main-blue;
+        border-radius: 15px;
+        background-color: transparent;
+        color: @main-blue;
+        padding: 9px 21px;
+        &:hover {
+            background-color: @main-blue;
+            color: @white;
+        }
+    }
+    .btn-primary.active {
+        border: 1px solid @main-blue;
+        border-radius: 15px;
+        background-color: @main-blue;
+        color: @white;
+        padding: 9px 21px;
+    }
+}
+
+// KONTAKT
+
+.sec-contact {
+    background-color: @main-gray;
+    .section-title {
+        padding-bottom: 50px;
+        @media (max-width: 991px) {
+            padding-bottom: 25px;
+        }
+        h2 {
+            color: @white;
+        }
+    }
+    .contact-address {
+        h1 {
+            font-size: 30px;
+            color: @main-pink;
+            @media (max-width: 991px) {
+                font-size: 25px;
+            }
+        }
+        .address {
+            color: @white;
+            font-size: 18px;
+        }
+    }
+    .map {
+        max-width: 100%;
+        height: auto;
+        iframe {
+            width: 100%;
+            min-height: 400px;
+            @media (max-width: 991px) {
+                min-height: 300px
             }
         }
     }
